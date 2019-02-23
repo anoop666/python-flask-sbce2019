@@ -1,16 +1,16 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app=Flask(__name__)
 @app.route("/")
 def index():
-    return "hello.... anoop"
+    return render_template("index.html")
 
 @app.route("/home")
 def kido():
-    return ("my home page")
+    return render_template("index.html")
 
 @app.route("/contact")
 def kiki():
-    return (" my contacts page")
+    return (" my contacts id is")
 if(__name__=="__main__"):
-    app.run()
+    app.run(debug=True)
